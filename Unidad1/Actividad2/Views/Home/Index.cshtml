@@ -1,0 +1,32 @@
+﻿@model Actividad2.Models.PromedioViewModel
+<html>
+
+<head>
+
+    <title>Calificaciones</title>
+
+</head>
+<body style="background:#bfffff">
+    <h3>Calificaciones</h3>
+
+    <form method="post" action="~/Home/Index">
+
+        <label>Calificación 1:</label>
+        <input type="number" name="c1" value="@Model.Calif1" /><br />
+        <label>Calificación 2:</label>
+        <input type="number" name="c2" value="@Model.Calif2" /><br />
+        <label>Calificación 3:</label>
+        <input type="number" name="c3" value="@Model.Calif3" /><br />
+        <label>   </label><br />
+        <input type="submit" value="Calcular" /><br />
+        <label></label><br />
+        <label>Promedio:</label>
+        <input type="number" readonly value="@Model.Promedio" /><br />
+        <label>     </label><br />
+
+        <label>Estado del alumno:</label>
+        <input type="text" readonly value="@Model.EstadoUsuario()" />
+    </form>
+</body>
+
+</html>
